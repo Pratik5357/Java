@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo | Before Element</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(11, 3, 25);
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        div{
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            position: relative;
+        }
+        div p {
+            font-size: 2rem;
+            color: rgb(11, 9, 9);
+        }
+        div::before{
+            content: "";
+            position: absolute;
+            height: calc(100%);
+            width: calc(100%);
+            background: #E3540B;
+            background: linear-gradient(135deg, #E3540B, #AD179B);
+            z-index: -1;
+            filter: blur(15px);
+        }   
+    </style>
+</head>
+<body>
+    <div>
+        <p>hello guy's</p>
+    </div>
+</body>
+</html>
